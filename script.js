@@ -1,40 +1,47 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const cart = [];
-
-  // Smooth Scrolling Navigation
-  const navLinks = document.querySelectorAll(".category-nav a");
-
-  navLinks.forEach((link) => {
+  // 1. Smooth scrolling for nav & footer links
+  const links = document.querySelectorAll(".category-nav a, .footer-links a");
+  links.forEach((link) => {
     link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-
-      if (targetSection) {
-        const navHeight = document.querySelector(".category-nav").offsetHeight;
-        const sectionTop = targetSection.offsetTop - navHeight - 10;
-
-        window.scrollTo({
-          top: sectionTop,
-          behavior: "smooth",
-        });
+      const targetId = link.getAttribute("href");
+      if (targetId && targetId.startsWith("#")) {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
   });
 
-  // Add to Cart Functionality & Feedback Animation
+  // 2. Interactive hover effect for service cards
+  const serviceCards = document.querySelectorAll(".service-card");
+  serviceCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transform = "translateY(-5px)";
+      card.style.transition = "transform 0.3s ease";
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "translateY(0)";
+    });
+  });
+
+  // 3. Add to Cart functionality
+  const cart = [];
   const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
 
   addToCartButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const btn = e.target;
+      const card = btn.closest(".food-card");
 
-      const item = {
-        id: btn.getAttribute("data-id"),
-        name: btn.getAttribute("data-name"),
-        price: parseFloat(btn.getAttribute("data-price")),
-        category: btn.getAttribute("data-category"),
-      };
+      // Extract item details directly from the food card elements
+      const name = card.querySelector("h3") ? card.querySelector("h3").textContent.trim() : "Item";
+      const priceElement = card.querySelector(".food-price");
+      const priceText = priceElement ? priceElement.textContent : "0";
+      const price = parseFloat(priceText.replace(/[^0-9.]/g, "")) || 0;
+
+      const item = { name, price };
 
       addToCart(item);
       animateButton(btn);
@@ -42,14 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function addToCart(item) {
-    const existingIndex = cart.findIndex((cartItem) => cartItem.id === item.id);
-
-    if (existingIndex > -1) {
-      cart[existingIndex].quantity += 1;
+    const existingItem = cart.find((cartItem) => cartItem.name === item.name);
+    if (existingItem) {
+      existingItem.quantity += 1;
     } else {
       cart.push({ ...item, quantity: 1 });
     }
-
     console.log("Cart contents:", cart);
   }
 
