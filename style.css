@@ -1,0 +1,226 @@
+/* GLOBAL STYLES & RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* LUKE'S HERO & NAVBAR */
+.menu-header, .hero-header, header {
+  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
+              url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  color: #ffffff;
+  padding: 2rem 1rem 4rem 1rem;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f59e0b;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* CATEGORY NAVIGATION */
+.category-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.category-nav a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.category-nav a:hover {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+
+/* FOOD MENU GRID & CARDS */
+.menu-wrapper {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem 0;
+  color: #0f172a;
+  border-bottom: 2px solid #f59e0b;
+  display: inline-block;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.food-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* IMAGE SIZING FIX */
+.food-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.category-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f59e0b;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.food-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.food-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.food-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.food-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #f59e0b;
+}
+
+/* SECTIONS & FOOTER */
+.about-section, .services-section {
+  padding: 4rem 1rem;
+  background: #ffffff;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0 auto;
+}
+
+.service-card {
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.main-footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #f59e0b;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}/* FORCE VISIBILITY FOR ADD TO CART BUTTONS */
+.add-to-cart-btn {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  padding: 0.75rem 1rem !important;
+  background-color: #0f172a !important; /* Dark slate background */
+  color: #ffffff !important;           /* Bright white text */
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  border: 1px solid #0f172a !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  margin-top: 1rem !important;
+  text-align: center !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #f59e0b !important; /* Gold on hover */
+  border-color: #f59e0b !important;
+}
