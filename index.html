@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Ordering System - Extended Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="menu-header">
+    <h1>Our Menu</h1>
+    <p>African, Kenyan & Continental Fusion</p>
+  </header>
+
+  <nav class="category-nav">
+    <a href="#starters">Starters & Wraps</a>
+    <a href="#mains">Mains & Pastas</a>
+    <a href="#sides">Sides & Extras</a>
+    <a href="#desserts">Desserts</a>
+    <a href="#drinks">Drinks & Cocktails</a>
+  </nav>
+
+  <main class="menu-wrapper">
+
+    <!-- ===================== STARTERS & WRAPS ===================== -->
+    <section class="menu-category" id="starters">
+      <h2 class="category-title">Starters & Wraps</h2>
+      <div class="food-grid">
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&auto=format&fit=crop" alt="Beef Samosas" class="food-img">
+          <span class="category-badge">Starter</span>
+          <div class="food-info">
+            <h3 class="food-name">Kenyan Beef Samosas (Pair)</h3>
+            <p class="food-desc">Crispy golden pastry stuffed with spiced minced beef, spring onions, and cilantro.</p>
+            <span class="food-price">KSh 250</span>
+            <button class="add-to-cart-btn" data-id="s001" data-name="Kenyan Beef Samosas" data-price="250" data-category="Starters">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&auto=format&fit=crop" alt="Viazi Karai" class="food-img">
+          <span class="category-badge">Starter</span>
+          <div class="food-info">
+            <h3 class="food-name">Mombasa Viazi Karai</h3>
+            <p class="food-desc">Golden turmeric batter-fried seasoned potatoes served with tangy ukwaju (tamarind) sauce.</p>
+            <span class="food-price">KSh 200</span>
+            <button class="add-to-cart-btn" data-id="s002" data-name="Mombasa Viazi Karai" data-price="200" data-category="Starters">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500&auto=format&fit=crop" alt="Beef Suya Skewers" class="food-img">
+          <span class="category-badge">Starter</span>
+          <div class="food-info">
+            <h3 class="food-name">West African Beef Suya</h3>
+            <p class="food-desc">Tender beef skewers marinated in spicy peanut kuli-kuli rub, grilled over open flame.</p>
+            <span class="food-price">KSh 450</span>
+            <button class="add-to-cart-btn" data-id="s003" data-name="West African Beef Suya" data-price="450" data-category="Starters">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=500&auto=format&fit=crop" alt="Grilled Chicken Wrap" class="food-img">
+          <span class="category-badge">Wrap</span>
+          <div class="food-info">
+            <h3 class="food-name">Grilled Chicken & Avocado Wrap</h3>
+            <p class="food-desc">Seasoned grilled chicken strips, fresh avocado, lettuce, and garlic mayo wrapped in a toasted tortilla.</p>
+            <span class="food-price">KSh 550</span>
+            <button class="add-to-cart-btn" data-id="s004" data-name="Chicken & Avocado Wrap" data-price="550" data-category="Starters">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== MAINS & PASTAS ===================== -->
+    <section class="menu-category" id="mains">
+      <h2 class="category-title">Mains & Pastas</h2>
+      <div class="food-grid">
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&auto=format&fit=crop" alt="Swahili Beef Pilau" class="food-img">
+          <span class="category-badge">Main</span>
+          <div class="food-info">
+            <h3 class="food-name">Swahili Spiced Beef Pilau</h3>
+            <p class="food-desc">Fragrant rice simmered in rich beef broth, cumin, cardamom, and cloves, served with fresh kachumbari.</p>
+            <span class="food-price">KSh 600</span>
+            <button class="add-to-cart-btn" data-id="m001" data-name="Swahili Beef Pilau" data-price="600" data-category="Mains">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop" alt="Gourmet Beef Burger" class="food-img">
+          <span class="category-badge">Main</span>
+          <div class="food-info">
+            <h3 class="food-name">Classic House Beef Burger</h3>
+            <p class="food-desc">Flame-grilled beef patty topped with melted cheddar, caramelized onions, pickles, and house sauce on a brioche bun.</p>
+            <span class="food-price">KSh 750</span>
+            <button class="add-to-cart-btn" data-id="m002" data-name="Classic House Beef Burger" data-price="750" data-category="Mains">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500&auto=format&fit=crop" alt="Creamy Chicken Pasta" class="food-img">
+          <span class="category-badge">Pasta</span>
+          <div class="food-info">
+            <h3 class="food-name">Creamy Garlic Chicken Alfredo</h3>
+            <p class="food-desc">Penne pasta tossed in a rich garlic Parmesan cream sauce with pan-seared chicken breast and herbs.</p>
+            <span class="food-price">KSh 850</span>
+            <button class="add-to-cart-btn" data-id="m003" data-name="Creamy Chicken Alfredo" data-price="850" data-category="Mains">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&auto=format&fit=crop" alt="Nyama Choma Platter" class="food-img">
+          <span class="category-badge">Main</span>
+          <div class="food-info">
+            <h3 class="food-name">Kenyan Nyama Choma Platter</h3>
+            <p class="food-desc">Slow-roasted goat or beef served with steaming ugali, fresh kachumbari, and chili dip.</p>
+            <span class="food-price">KSh 950</span>
+            <button class="add-to-cart-btn" data-id="m004" data-name="Kenyan Nyama Choma" data-price="950" data-category="Mains">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=500&auto=format&fit=crop" alt="Nigerian Jollof Rice" class="food-img">
+          <span class="category-badge">Main</span>
+          <div class="food-info">
+            <h3 class="food-name">Nigerian Smoky Jollof & Plantains</h3>
+            <p class="food-desc">Rich tomato-pepper spiced party jollof rice paired with sweet dodo (fried plantains) and tender beef stew.</p>
+            <span class="food-price">KSh 800</span>
+            <button class="add-to-cart-btn" data-id="m005" data-name="Nigerian Jollof Rice" data-price="800" data-category="Mains">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== SIDES & EXTRAS ===================== -->
+    <section class="menu-category" id="sides">
+      <h2 class="category-title">Sides & Extras</h2>
+      <div class="food-grid">
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=500&auto=format&fit=crop" alt="French Fries" class="food-img">
+          <span class="category-badge">Side</span>
+          <div class="food-info">
+            <h3 class="food-name">Crispy Masala French Fries</h3>
+            <p class="food-desc">Golden potato fries tossed in tangy tomato masala sauce, fresh cilantro, and chili spices.</p>
+            <span class="food-price">KSh 250</span>
+            <button class="add-to-cart-btn" data-id="side001" data-name="Masala French Fries" data-price="250" data-category="Sides">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://thecraneresortnakuru.com/wp-content/uploads/2024/07/1157732_389624964497010_139466533_n.jpg" alt="Mboga Kienyezi" class="food-img">
+          <span class="category-badge">Side</span>
+          <div class="food-info">
+            <h3 class="food-name">Traditional Mboga Kienyezi</h3>
+            <p class="food-desc">Sautéed indigenous greens (Managu/Terere) simmered in milk and butter, served with hot ugali.</p>
+            <span class="food-price">KSh 350</span>
+            <button class="add-to-cart-btn" data-id="side002" data-name="Mboga Kienyezi & Ugali" data-price="350" data-category="Sides">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://hips.hearstapps.com/hmg-prod/images/211104-delish-seo-garlic-mash-potatoes-horizontal-0070-eb-1636756906.jpg" alt="Mashed Potatoes" class="food-img">
+          <span class="category-badge">Side</span>
+          <div class="food-info">
+            <h3 class="food-name">Creamy Garlic Mashed Potatoes</h3>
+            <p class="food-desc">Velvety whipped potatoes infused with roasted garlic, butter, and rich savory gravy.</p>
+            <span class="food-price">KSh 300</span>
+            <button class="add-to-cart-btn" data-id="side003" data-name="Garlic Mashed Potatoes" data-price="300" data-category="Sides">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?w=500&auto=format&fit=crop" alt="Steamed Rice" class="food-img">
+          <span class="category-badge">Side</span>
+          <div class="food-info">
+            <h3 class="food-name">Steamed Jasmine Rice</h3>
+            <p class="food-desc">Fluffy long-grain aromatic steamed rice, perfect as a side for stews and curries.</p>
+            <span class="food-price">KSh 150</span>
+            <button class="add-to-cart-btn" data-id="side004" data-name="Steamed Jasmine Rice" data-price="150" data-category="Sides">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== DESSERTS ===================== -->
+    <section class="menu-category" id="desserts">
+      <h2 class="category-title">Desserts</h2>
+      <div class="food-grid">
+
+        <article class="food-card">
+          <img src="https://divdishes.com/wp-content/uploads/2024/04/Mahamri-on-a-plate.jpg" alt="Swahili Mahamri" class="food-img">
+          <span class="category-badge">Dessert</span>
+          <div class="food-info">
+            <h3 class="food-name">Swahili Mahamri & Coconut Custard</h3>
+            <p class="food-desc">Warm, cardamom-infused triangular donuts served with a rich coconut vanilla dip.</p>
+            <span class="food-price">KSh 300</span>
+            <button class="add-to-cart-btn" data-id="d001" data-name="Mahamri and Coconut Custard" data-price="300" data-category="Desserts">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop" alt="Malva Pudding" class="food-img">
+          <span class="category-badge">Dessert</span>
+          <div class="food-info">
+            <h3 class="food-name">South African Malva Pudding</h3>
+            <p class="food-desc">Warm caramelized apricot sponge cake soaked in sweet butter cream sauce with vanilla ice cream.</p>
+            <span class="food-price">KSh 450</span>
+            <button class="add-to-cart-btn" data-id="d002" data-name="Malva Pudding" data-price="450" data-category="Desserts">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== DRINKS & COCKTAILS ===================== -->
+    <section class="menu-category" id="drinks">
+      <h2 class="category-title">Drinks & Cocktails</h2>
+      <div class="food-grid">
+
+        <article class="food-card">
+          <img src="https://cdn.africanvibes.com/wp-content/uploads/2024/07/12211748/KENYAN-DAWA-DRINK-RECIPE.png" alt="Kenyan Honey Dawa" class="food-img">
+          <span class="category-badge">Drink</span>
+          <div class="food-info">
+            <h3 class="food-name">Classic Kenyan Honey Dawa</h3>
+            <p class="food-desc">Crushed lime with pure honey, crushed ginger, and ice served with a traditional wooden dawa stick.</p>
+            <span class="food-price">KSh 250</span>
+            <button class="add-to-cart-btn" data-id="dr001" data-name="Classic Kenyan Honey Dawa" data-price="250" data-category="Drinks">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&auto=format&fit=crop" alt="Classic Mint Mojito" class="food-img">
+          <span class="category-badge">Cocktail</span>
+          <div class="food-info">
+            <h3 class="food-name">Classic Mint Mojito</h3>
+            <p class="food-desc">Fresh muddled lime wedges, fresh mint leaves, white rum, simple syrup, and sparkling soda over ice.</p>
+            <span class="food-price">KSh 650</span>
+            <button class="add-to-cart-btn" data-id="dr002" data-name="Classic Mint Mojito" data-price="650" data-category="Drinks">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&auto=format&fit=crop" alt="Signature Cocktail" class="food-img">
+          <span class="category-badge">Cocktail</span>
+          <div class="food-info">
+            <h3 class="food-name">Tropical Passion Rum Punch</h3>
+            <p class="food-desc">Dark and light rum shaken with fresh passion fruit juice, orange juice, grenadine, and lime juice.</p>
+            <span class="food-price">KSh 700</span>
+            <button class="add-to-cart-btn" data-id="dr003" data-name="Tropical Passion Rum Punch" data-price="700" data-category="Drinks">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop" alt="Kenyan Tangawizi Tea" class="food-img">
+          <span class="category-badge">Drink</span>
+          <div class="food-info">
+            <h3 class="food-name">Kenyan Tangawizi Spiced Tea</h3>
+            <p class="food-desc">Hot whole-milk black tea simmered with fresh crushed ginger root, cardamom, and spices.</p>
+            <span class="food-price">KSh 180</span>
+            <button class="add-to-cart-btn" data-id="dr004" data-name="Kenyan Tangawizi Tea" data-price="180" data-category="Drinks">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
