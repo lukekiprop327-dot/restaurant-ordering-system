@@ -252,10 +252,25 @@ body {
   transition: background-color var(--transition-speed);
 }
 
-.add-to-cart-btn:hover {
-  background-color: var(--primary-hover);
+.add-to-cart-btn {
+  background-color: #e65100;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
+.add-to-cart-btn:hover {
+  background-color: #bf360c;
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.96);
+}
 /* ===================== RESPONSIVE DESIGN ===================== */
 @media (max-width: 600px) {
   .menu-header h1 {
